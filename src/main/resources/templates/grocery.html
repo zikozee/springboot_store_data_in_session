@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>NEW GROCERY</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<br>
+<h3>New Grocery</h3>
+<div class="container">
+    <form action="#" th:action="@{/add}"
+          th:object="${cart}" method="post">
+
+        <br>
+        <input type="text" th:field="*{groceryItem}"
+               class="form-control mb-4 col-4" placeholder="Grocery Item">
+        <br>
+
+        <button type="submit" class="btn btn-info col-2">Save</button>
+
+    </form>
+
+<hr>
+<a th:href="@{/listItem}">Go to Items Page</a>
+</div>
+</body>
+</html>
